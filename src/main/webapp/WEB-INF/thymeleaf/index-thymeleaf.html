@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:substituteby="includes :: head">
+  <link rel="stylesheet" href="../../static/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container-fluid">
+
+  <div th:substituteby="includes :: pageHeader"></div>
+
+  <form action="result-thymeleaf.html" th:action="@{/thymeleaf}"
+        th:object="${form}"
+        method="post" class="form-horizontal">
+    <div class="control-group">
+      <label for="name" class="control-label" th:text="#{example.name}">Name</label>
+
+      <div class="controls">
+        <input type="text" th:field="*{name}" class="input-xlarge"/>
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="email" class="control-label" th:text="#{example.email}">Email</label>
+
+      <div class="controls">
+        <input type="email" th:field="*{email}"
+               placeholder="john@example.org" th:placeholder="#{example.email.placeholder}"
+               class="input-xlarge"/>
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="word" class="control-label" th:text="#{example.pick-word}">Pick a word</label>
+
+      <div class="controls">
+        <select th:remove="all-but-first" th:field="*{word}">
+          <option th:each="word : ${words}" th:value="${word}" th:text="${word}">One</option>
+          <option>Two</option>
+          <option>Three</option>
+          <option>Four</option>
+        </select>
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        <input type="submit" class="btn btn-primary" th:value="#{example.submit}"/>
+      </div>
+    </div>
+
+  </form>
+</div>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.2.min.js" th:substituteby="includes :: scripts"></script>
+<script th:remove="all" type="text/javascript" src="../../static/js/thymol.js"></script>
+</body>
+</html>

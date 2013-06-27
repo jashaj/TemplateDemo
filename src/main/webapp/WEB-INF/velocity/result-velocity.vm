@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="copyright" content="&#169; 2013 Onegini"/>
+  <title>#springMessage("example.title") - Velocity</title>
+  <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container-fluid">
+  <div class="page-header">
+    <h1>#springMessage("example.title") - Velocity</h1>
+  </div>
+  <dl class="dl-horizontal">
+    <dt>#springMessage("example.name")</dt>
+    <dd>#if(${form.name})$escapeTool.escapeXml(${form.name})#end</dd>
+    <dt>#springMessage("example.email")</dt>
+    <dd>#if(${form.email})$escapeTool.escapeXml(${form.email})#end</dd>
+    <dt>#springMessage("example.word")</dt>
+    <dd>#if($form.word)$escapeTool.escapeXml(${form.word})#end</dd>
+  </dl></div>
+</body>
+</html>
