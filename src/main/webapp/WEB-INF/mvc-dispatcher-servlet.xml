@@ -32,7 +32,7 @@
   </bean>
 
   <!-- THYMELEAF: Template Engine (Spring3-specific version) -->
-  <bean id="templateEngine" class="org.thymeleaf.spring3.SpringTemplateEngine">
+  <bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">
     <property name="templateResolvers">
       <set>
         <ref bean="webTemplateResolver"/>
@@ -45,7 +45,7 @@
     </property>
   </bean>
   <!-- THYMELEAF: View Resolver - implementation of Spring's ViewResolver interface -->
-  <bean id="thymeleafViewResolver" class="org.thymeleaf.spring3.view.ThymeleafViewResolver">
+  <bean id="thymeleafViewResolver" class="org.thymeleaf.spring4.view.ThymeleafViewResolver">
     <property name="excludedViewNames" value="*-jsp"/>
     <property name="templateEngine" ref="templateEngine"/>
     <property name="characterEncoding" value="UTF-8"/>

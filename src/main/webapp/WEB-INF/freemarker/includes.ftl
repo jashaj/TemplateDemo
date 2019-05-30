@@ -16,6 +16,6 @@
 [/#macro]
 
 [#macro scripts]
-<script src=/webjars/jquery/2.0.2/jquery.min.js></script>
+<script src=/webjars/jquery/3.4.1/jquery.min.js></script>
 <script src=/static/js/bootstrap.min.js></script>
 [/#macro]
