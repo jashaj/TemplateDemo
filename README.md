@@ -2,8 +2,7 @@
 
 This is a demo project to show the differences among several Java templating engines in Spring MVC:
   - JSP
-  - Freemarker
-  - Velocity
+  - Apache Freemarker
   - Thymeleaf
 
 ## Build and run
@@ -19,5 +18,4 @@ Run the project with
 See the demo URLs:
   - http://localhost:8080/jsp
   - http://localhost:8080/freemarker
-  - http://localhost:8080/velocity
   - http://localhost:8080/thymeleaf

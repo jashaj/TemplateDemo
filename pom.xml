@@ -18,10 +18,9 @@
     <freemarker.version>2.3.29</freemarker.version>
     <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
     <jquery.version>3.4.1</jquery.version>
-    <spring.version>4.3.24.RELEASE</spring.version>
+    <spring.version>5.2.1.RELEASE</spring.version>
     <tomcat.version>7.0.94</tomcat.version>
     <thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
-    <velocity.version>1.7</velocity.version>
   </properties>
 
   <dependencies>
@@ -65,7 +64,7 @@
     </dependency>
     <dependency>
       <groupId>org.thymeleaf</groupId>
-      <artifactId>thymeleaf-spring4</artifactId>
+      <artifactId>thymeleaf-spring5</artifactId>
       <version>${thymeleaf.version}</version>
     </dependency>
 
@@ -74,19 +73,6 @@
       <groupId>org.freemarker</groupId>
       <artifactId>freemarker</artifactId>
       <version>${freemarker.version}</version>
-    </dependency>
-
-    <!-- Velocity -->
-    <dependency>
-      <groupId>org.apache.velocity</groupId>
-      <artifactId>velocity</artifactId>
-      <version>${velocity.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.velocity</groupId>
-      <artifactId>velocity-tools</artifactId>
-      <version>2.0</version>
     </dependency>
 
     <dependency>
