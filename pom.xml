@@ -16,7 +16,7 @@
 
   <properties>
     <freemarker.version>2.3.29</freemarker.version>
-    <javax.servlet-api.version>3.0.1</javax.servlet-api.version>
+    <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
     <jquery.version>3.4.1</jquery.version>
     <spring.version>4.3.24.RELEASE</spring.version>
     <tomcat.version>7.0.94</tomcat.version>
