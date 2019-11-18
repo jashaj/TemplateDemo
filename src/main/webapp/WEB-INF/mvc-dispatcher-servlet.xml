@@ -23,7 +23,7 @@
   </bean>
 
   <!-- THYMELEAF: Template Resolver for webapp pages   -->
-  <bean id="webTemplateResolver" class="org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver">
+  <bean id="webTemplateResolver" class="org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver">
     <property name="prefix" value="/WEB-INF/thymeleaf/"/>
     <property name="suffix" value=".html"/>
     <property name="templateMode" value="HTML5"/>
@@ -32,7 +32,7 @@
   </bean>
 
   <!-- THYMELEAF: Template Engine (Spring3-specific version) -->
-  <bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">
+  <bean id="templateEngine" class="org.thymeleaf.spring5.SpringTemplateEngine">
     <property name="templateResolvers">
       <set>
         <ref bean="webTemplateResolver"/>
@@ -40,7 +40,7 @@
     </property>
   </bean>
   <!-- THYMELEAF: View Resolver - implementation of Spring's ViewResolver interface -->
-  <bean id="thymeleafViewResolver" class="org.thymeleaf.spring4.view.ThymeleafViewResolver">
+  <bean id="thymeleafViewResolver" class="org.thymeleaf.spring5.view.ThymeleafViewResolver">
     <property name="excludedViewNames" value="*-jsp"/>
     <property name="templateEngine" ref="templateEngine"/>
     <property name="characterEncoding" value="UTF-8"/>
@@ -64,19 +64,6 @@
     <property name="prefix" value=""/>
     <property name="suffix" value=".ftl"/>
     <property name="order" value="0"/>
-  </bean>
-
-  <bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
-    <property name="resourceLoaderPath" value="/WEB-INF/velocity/"/>
-  </bean>
-
-  <bean id="velocityViewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
-    <property name="cache" value="false"/>
-    <property name="prefix" value=""/>
-    <property name="suffix" value=".vm"/>
-    <property name="order" value="1"/>
-    <property name="toolboxConfigLocation" value="/WEB-INF/velocity/toolbox.xml"/>
-    <property name="exposeSpringMacroHelpers" value="true"/>
   </bean>
 
   <!-- Configuring messages.properties file -->
