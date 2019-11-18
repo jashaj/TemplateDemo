@@ -20,7 +20,6 @@
     <jquery.version>3.4.1</jquery.version>
     <spring.version>4.3.24.RELEASE</spring.version>
     <tomcat.version>7.0.94</tomcat.version>
-    <thymeleaf-extras-conditionalcomments.version>2.0.0</thymeleaf-extras-conditionalcomments.version>
     <thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
     <velocity.version>1.7</velocity.version>
   </properties>
@@ -68,11 +67,6 @@
       <groupId>org.thymeleaf</groupId>
       <artifactId>thymeleaf-spring4</artifactId>
       <version>${thymeleaf.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.thymeleaf.extras</groupId>
-      <artifactId>thymeleaf-extras-conditionalcomments</artifactId>
-      <version>${thymeleaf-extras-conditionalcomments.version}</version>
     </dependency>
 
     <!-- Freemarker -->
