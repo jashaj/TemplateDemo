@@ -21,7 +21,7 @@
     <spring.version>4.3.24.RELEASE</spring.version>
     <tomcat.version>7.0.94</tomcat.version>
     <thymeleaf-extras-conditionalcomments.version>2.0.0</thymeleaf-extras-conditionalcomments.version>
-    <thymeleaf.version>2.1.6.RELEASE</thymeleaf.version>
+    <thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
     <velocity.version>1.7</velocity.version>
   </properties>
 
