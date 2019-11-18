@@ -23,7 +23,7 @@
   </bean>
 
   <!-- THYMELEAF: Template Resolver for webapp pages   -->
-  <bean id="webTemplateResolver" class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
+  <bean id="webTemplateResolver" class="org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver">
     <property name="prefix" value="/WEB-INF/thymeleaf/"/>
     <property name="suffix" value=".html"/>
     <property name="templateMode" value="HTML5"/>
@@ -36,11 +36,6 @@
     <property name="templateResolvers">
       <set>
         <ref bean="webTemplateResolver"/>
-      </set>
-    </property>
-    <property name="additionalDialects">
-      <set>
-        <bean class="org.thymeleaf.extras.conditionalcomments.dialect.ConditionalCommentsDialect"/>
       </set>
     </property>
   </bean>
