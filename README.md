@@ -1,5 +1,7 @@
 # Template Demo
 
+[![Build Status](https://github.com/jashaj/TemplateDemo/workflows/Java%20CI/badge.svg)](https://github.com/jashaj/TemplateDemo/actions)
+
 This is a demo project to show the differences among several Java templating engines in Spring MVC:
   - JSP
   - Apache Freemarker
