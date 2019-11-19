@@ -1,4 +1,4 @@
-#Template Demo
+# Template Demo
 
 This is a demo project to show the differences among several Java templating engines in Spring MVC:
   - JSP
@@ -13,7 +13,7 @@ Build the project with
 
 Run the project with
 
-    mvn tomcat7:run
+    mvn jetty:run
 
 See the demo URLs:
   - http://localhost:8080/jsp
