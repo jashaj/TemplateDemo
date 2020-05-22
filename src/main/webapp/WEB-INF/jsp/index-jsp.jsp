@@ -38,6 +38,5 @@
     </div>
   </forms:form>
 </div>
-<%@ include file="scripts.jspf" %>
 </body>
 </html>

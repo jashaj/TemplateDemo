@@ -5,6 +5,8 @@
   <meta name=viewport content="width=device-width, initial-scale=1.0">
   <title>[@spring.message code="example.title"/] - Freemarker</title>
   <link rel=stylesheet href=/static/css/bootstrap.min.css>
+  <script src=/webjars/jquery/3.5.1/jquery.min.js defer></script>
+  <script src=/static/js/bootstrap.min.js defer></script>
 </head>
 [/#macro]
 
@@ -15,6 +17,4 @@
 [/#macro]
 
 [#macro scripts]
-<script src=/webjars/jquery/3.5.0/jquery.min.js></script>
-<script src=/static/js/bootstrap.min.js></script>
 [/#macro]
