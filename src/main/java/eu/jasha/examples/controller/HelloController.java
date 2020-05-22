@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import eu.jasha.examples.model.ExampleForm;
 
@@ -19,6 +20,11 @@ public class HelloController {
   @GetMapping
   public String home(final ModelMap modelMap) {
     return showForm("jsp", modelMap);
+  }
+
+  @GetMapping("favicon.ico")
+  @ResponseBody
+  public void favicon() {
   }
 
   @GetMapping(value = "{template}")
