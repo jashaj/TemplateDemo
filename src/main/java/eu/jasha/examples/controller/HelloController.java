@@ -25,6 +25,7 @@ public class HelloController {
   @GetMapping("favicon.ico")
   @ResponseBody
   public void favicon() {
+    // No favicon
   }
 
   @GetMapping(value = "{template}")

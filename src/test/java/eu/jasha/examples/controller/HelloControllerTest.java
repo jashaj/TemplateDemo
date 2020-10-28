@@ -20,30 +20,30 @@ public class HelloControllerTest {
   private ModelMap modelMap;
 
   @Before
-  public void setUp() throws Exception {
+  public void setUp() {
     controller = new HelloController();
     modelMap = new ModelMap();
   }
 
   @Test
-  public void should_return_jsp_view() throws Exception {
+  public void should_return_jsp_view() {
     final String view = controller.home(modelMap);
     assertEquals("index-jsp", view);
   }
 
   @Test
-  public void should_return_other_view() throws Exception {
+  public void should_return_other_view() {
     final String view = controller.showForm("test", modelMap);
     assertEquals("index-test", view);
     final ExampleForm form = (ExampleForm) modelMap.get("form");
     assertNull(form.getName());
     assertNull(form.getEmail());
     assertNotNull(form.getWord());
-    assertFalse(((List) modelMap.get("words")).isEmpty());
+    assertFalse(((List<?>) modelMap.get("words")).isEmpty());
   }
 
   @Test
-  public void should_handle_form_submit() throws Exception {
+  public void should_handle_form_submit() {
     final ExampleForm form = new ExampleForm();
     form.setName("John Doe");
     form.setEmail("john@example.com");
