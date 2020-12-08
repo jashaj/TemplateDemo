@@ -20,7 +20,7 @@ class HelloControllerTest {
   private ModelMap modelMap;
 
   @BeforeEach
-  public void setUp() {
+  void setUp() {
     controller = new HelloController();
     modelMap = new ModelMap();
   }
@@ -28,17 +28,21 @@ class HelloControllerTest {
   @Test
   void should_return_jsp_view() {
     final String view = controller.home(modelMap);
+
     assertEquals("index-jsp", view);
   }
 
   @Test
   void should_return_other_view() {
     final String view = controller.showForm("test", modelMap);
+
     assertEquals("index-test", view);
+
     final ExampleForm form = (ExampleForm) modelMap.get("form");
     assertNull(form.getName());
     assertNull(form.getEmail());
     assertNotNull(form.getWord());
+
     assertFalse(((List<?>) modelMap.get("words")).isEmpty());
   }
 
@@ -50,7 +54,9 @@ class HelloControllerTest {
     form.setWord("junit");
 
     final String view = controller.handleForm("test", form, modelMap);
+
     assertEquals("result-test", view);
+
     final ExampleForm fromModelMap = (ExampleForm) modelMap.get("form");
     assertSame(form, fromModelMap);
   }
