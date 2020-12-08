@@ -23,6 +23,7 @@
     <jquery.version>3.5.1</jquery.version>
     <spring.version>5.3.1</spring.version>
     <thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
+    <junit.version>5.7.0</junit.version>
   </properties>
 
   <dependencies>
@@ -91,9 +92,15 @@
     </dependency>
 
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.13.1</version>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
 
