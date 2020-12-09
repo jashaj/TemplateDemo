@@ -8,7 +8,7 @@ This is a demo project to show the differences among several Java templating eng
   - Thymeleaf
 
 ## Build and run
-You need [Apache Maven 3](https://maven.apache.org) to build and run this project.
+You need Java 11 and [Apache Maven 3](https://maven.apache.org) to build and run this project.
 Build the project with
     
     mvn clean install
