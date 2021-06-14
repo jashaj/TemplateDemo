@@ -18,6 +18,5 @@ updates:
       interval: "daily"
     ignore:
       - dependency-name: "org.eclipse.jetty:jetty-maven-plugin"
-        versions:
-          - "11.x"
+        versions: [ "11.x" ]
 
