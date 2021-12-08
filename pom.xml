@@ -20,7 +20,7 @@
 
     <junit.version>5.8.2</junit.version>
     <spring.version>5.3.13</spring.version>
-    <thymeleaf.version>3.0.13.RELEASE</thymeleaf.version>
+    <thymeleaf.version>3.0.14.RELEASE</thymeleaf.version>
   </properties>
 
   <dependencies>
