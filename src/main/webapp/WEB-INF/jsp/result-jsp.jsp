@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <%@ include file="head.jspf" %>
 <body>
 <div class=container-fluid>
@@ -17,6 +17,5 @@
     <dd><c:out value="${form.word}"/></dd>
   </dl>
 </div>
-<%@ include file="scripts.jspf" %>
 </body>
 </html>
