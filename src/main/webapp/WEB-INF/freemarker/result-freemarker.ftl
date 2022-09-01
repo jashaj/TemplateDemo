@@ -1,7 +1,7 @@
 [#ftl]
 [#import "includes.ftl" as example/]
 <!DOCTYPE html>
-<html>
+<html lang="en">
 [@example.head/]
 <body>
 <div class="container-fluid">
@@ -16,6 +16,5 @@
     <dd>${form.word?html}</dd>
   </dl>
 </div>
-[@example.scripts/]
 </body>
 </html>

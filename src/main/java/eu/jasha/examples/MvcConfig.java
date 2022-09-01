@@ -1,7 +1,5 @@
 package eu.jasha.examples;
 
-import java.util.Properties;
-
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -23,6 +21,8 @@ import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
 import org.thymeleaf.templateresolver.ITemplateResolver;
+
+import java.util.Properties;
 
 @EnableWebMvc
 @Configuration
@@ -108,6 +108,7 @@ public class MvcConfig implements WebMvcConfigurer {
   public MessageSource messageSource() {
     ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
     messageSource.setBasename("messages");
+    messageSource.addBasenames("versions");
     return messageSource;
   }
 }
