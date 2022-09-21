@@ -18,7 +18,7 @@
     <java.version>11</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-    <junit.version>5.9.0</junit.version>
+    <junit.version>5.9.1</junit.version>
     <spring.version>5.3.23</spring.version>
     <thymeleaf.version>3.0.15.RELEASE</thymeleaf.version>
     <jquery.version>3.6.1</jquery.version>
