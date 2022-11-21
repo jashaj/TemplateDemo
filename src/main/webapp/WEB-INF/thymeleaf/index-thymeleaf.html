@@ -7,7 +7,7 @@
 <body>
 <div class="container-fluid">
 
-  <div th:substituteby="includes :: pageHeader"></div>
+  <div th:replace="includes :: pageHeader"></div>
 
   <form action="result-thymeleaf.html" th:action="@{/thymeleaf}"
         th:object="${form}"
