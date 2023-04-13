@@ -19,7 +19,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <junit.version>5.9.2</junit.version>
-    <spring.version>6.0.7</spring.version>
+    <spring.version>6.0.8</spring.version>
     <thymeleaf.version>3.1.1.RELEASE</thymeleaf.version>
     <jquery.version>3.6.4</jquery.version>
   </properties>
