@@ -1,10 +1,12 @@
 package eu.jasha.examples;
 
+import eu.jasha.examples.spring.TemplatePathToTypeConverter;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ResourceBundleMessageSource;
+import org.springframework.format.FormatterRegistry;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -24,6 +26,8 @@ import org.thymeleaf.templateresolver.ITemplateResolver;
 
 import java.util.Properties;
 
+import static java.nio.charset.StandardCharsets.UTF_8;
+
 @EnableWebMvc
 @Configuration
 @ComponentScan("eu.jasha.examples")
@@ -32,6 +36,11 @@ public class MvcConfig implements WebMvcConfigurer {
   @Override
   public void addResourceHandlers(final ResourceHandlerRegistry registry) {
     registry.addResourceHandler("/webjars/**").addResourceLocations("/webjars/");
+  }
+
+  @Override
+  public void addFormatters(FormatterRegistry registry) {
+    registry.addConverter(new TemplatePathToTypeConverter());
   }
 
   @Override
@@ -56,7 +65,7 @@ public class MvcConfig implements WebMvcConfigurer {
     resolver.setPrefix("/WEB-INF/thymeleaf/");
     resolver.setSuffix(".html");
     resolver.setTemplateMode(TemplateMode.HTML);
-    resolver.setCharacterEncoding("UTF-8");
+    resolver.setCharacterEncoding(UTF_8.name());
     resolver.setCacheable(false);
     return resolver;
   }
@@ -76,7 +85,7 @@ public class MvcConfig implements WebMvcConfigurer {
     ThymeleafViewResolver resolver = new ThymeleafViewResolver();
     resolver.setExcludedViewNames(new String[]{ "*-jsp" });
     resolver.setTemplateEngine(templateEngine);
-    resolver.setCharacterEncoding("UTF-8");
+    resolver.setCharacterEncoding(UTF_8.name());
     resolver.setOrder(2);
     return resolver;
   }
@@ -89,7 +98,7 @@ public class MvcConfig implements WebMvcConfigurer {
 
     FreeMarkerConfigurer configurer = new FreeMarkerConfigurer();
     configurer.setTemplateLoaderPath("/WEB-INF/freemarker/");
-    configurer.setDefaultEncoding("UTF-8");
+    configurer.setDefaultEncoding(UTF_8.name());
     configurer.setFreemarkerSettings(properties);
     return configurer;
   }
