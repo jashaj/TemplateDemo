@@ -1,18 +1,14 @@
 package eu.jasha.examples.controller;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.junit.jupiter.api.Assertions.assertSame;
-
-import java.util.List;
-
+import eu.jasha.examples.model.ExampleForm;
+import eu.jasha.examples.model.TemplateType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.ui.ModelMap;
 
-import eu.jasha.examples.model.ExampleForm;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 class HelloControllerTest {
 
@@ -34,9 +30,9 @@ class HelloControllerTest {
 
   @Test
   void should_return_other_view() {
-    final String view = controller.showForm("test", modelMap);
+    final String view = controller.showForm(TemplateType.JSP, modelMap);
 
-    assertEquals("index-test", view);
+    assertEquals("index-jsp", view);
 
     final ExampleForm form = (ExampleForm) modelMap.get("form");
     assertNull(form.getName());
@@ -53,9 +49,9 @@ class HelloControllerTest {
     form.setEmail("john@example.com");
     form.setWord("junit");
 
-    final String view = controller.handleForm("test", form, modelMap);
+    final String view = controller.handleForm(TemplateType.JSP, form, modelMap);
 
-    assertEquals("result-test", view);
+    assertEquals("result-jsp", view);
 
     final ExampleForm fromModelMap = (ExampleForm) modelMap.get("form");
     assertSame(form, fromModelMap);
