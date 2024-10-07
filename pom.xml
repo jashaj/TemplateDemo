@@ -22,7 +22,7 @@
     <spring.version>6.1.13</spring.version>
     <thymeleaf.version>3.1.2.RELEASE</thymeleaf.version>
     <jquery.version>3.7.1</jquery.version>
-    <surefire-failsafe.version>3.5.0</surefire-failsafe.version>     
+    <surefire-failsafe.version>3.5.1</surefire-failsafe.version>     
   </properties>
 
   <dependencies>
